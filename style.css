@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Colors primary */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Colors secondary */
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "card1 card2 card5"
+    "card3 card4 card5";
+  grid-gap: 16px;
+  background-color: var(--light-gray);
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: var(--white);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card h1,
+.card span {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.card p {
+  color: var(--light-grayish-blue);
+}
+
+.card1 img,.card4 img{
+  border: 3px solid var(--moderate-violet);
+}
+
+.card1 {
+  grid-area: card1;
+  width: 550px;
+  height: 310px;
+  background-color: var(--moderate-violet);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.card2 {
+  grid-area: card2;
+  width: 270px;
+  height: 310px;
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.card3 {
+  grid-area: card3;
+  width: 270px;
+  height: 300px;
+  background-color: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+
+.card3 p {
+  color: var(--very-dark-blackish-blue);
+}
+
+.card4 {
+  grid-area: card4;
+  width: 550px;
+  height: 310px;
+  position: relative;
+  right: 278px;
+  background-color: var(--very-dark-blackish-blue);
+}
+
+.card5 {
+  grid-area: card5;
+  width: 250px;
+  position: relative;
+  right: 278px;
+  background-color: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+
+.card5 p {
+  color: var(--very-dark-blackish-blue);
+}
+
+@media (max-width: 500px) {
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .card2,
+  .card3 {
+    width: 385px;
+    height: 200px;
+  }
+
+  .card1,
+  .card4 {
+    width: 403px;
+    height: 450px;
+    padding: 16px;
+  }
+
+  .card5 {
+    width: 385px;
+    height: 350px;
+  }
+
+  .card4,
+  .card5 {
+    position: relative;
+    right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .card2,
+  .card3 {
+    width: 385px;
+    height: 200px;
+  }
+
+  .card1,
+  .card4 {
+    width: 403px;
+    height: 450px;
+    padding: 16px;
+  }
+
+  .card5 {
+    width: 385px;
+    height: 350px;
+  }
+
+  .card4,
+  .card5 {
+    position: relative;
+    right: 0;
+  }
+}
